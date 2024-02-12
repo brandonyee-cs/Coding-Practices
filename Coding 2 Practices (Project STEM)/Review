@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import math
 
 question = input("Enter Question: (1, 2a, 2b, 2c, 3a, 3b): ")
@@ -90,3 +92,16 @@ elif question == '3a':
 
     num = AncientMult(numa,numb)
     print(num)
+
+elif question == '3b':
+    multagain = False
+    while multagain != True:
+        numa = int(input("Enter a Value: "))
+        numb = int(input("Enter a Value: "))
+
+        num = AncientMult(numa,numb)
+        print(num)
+
+        multagainquestion = input("Again? (y/n): ")
+        if multagainquestion == 'n':
+            multagain = True

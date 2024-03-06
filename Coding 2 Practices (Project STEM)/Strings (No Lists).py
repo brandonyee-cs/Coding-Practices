@@ -28,9 +28,9 @@ def piglatconv(string):
     if string[i] == " ":
       piglatay += string[last_index:i] + "AY "; last_index = i + 1
   piglatay += string[last_index:] + "AY"; last_index = 0
-  for n in range(len(piglatay)):
-    if piglatay[i] == " " or i == len(piglatay)-1:
-      word = piglatay[last_index:i]; piglat += word[1:len(word)-2] + word[0] + "AY "; last_index = n + 1
+  for j in range(len(piglatay)):
+    if piglatay[j] == " " or j == len(piglatay)-1:
+      word = piglatay[last_index:j]; piglat += word[1:len(word)-2] + word[0] + "AY "; last_index = j + 1
     word = ""
   return piglat
 
@@ -38,7 +38,7 @@ string = input("Enter a sentence: ")
 print(piglatconv(string))
 
 #4 System Login and Password
-def sysnames(firstname, lastname, ID):
+def sysnames(firstname, lastname, ID): #4.A
     login = ""
     for i in range(0, 3):
        login += firstname[i]
@@ -49,7 +49,7 @@ def sysnames(firstname, lastname, ID):
     login += ID[-1]
     return login
 
-def passdefiner():
+def passdefiner(): #4.B
    validpass = False
    upper = 0
    lower = 0
@@ -65,6 +65,7 @@ def passdefiner():
             nummer = 1
     if upper == 1 and lower == 1 and nummer ==1:
        print("Password is valid.")
+       validpass = True
     else:
        print("Password is not valid!")
 
